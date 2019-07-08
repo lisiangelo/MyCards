@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".InsertNewCard">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/layout_crop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <com.theartofdev.edmodo.cropper.CropImageView
+                    android:id="@+id/CropImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="onCropImageClick"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_with_corner"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:padding="5dp"
+                    android:text="Crop Image" />
+
+            </LinearLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/layout_insert"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nome_card_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Nome della Card" />
+
+                    <EditText
+                        android:id="@+id/nome_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="titolo card" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/image_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nome_card_div"
+                    android:layout_marginTop="20dp">
+
+                    <ImageButton
+                        android:id="@+id/image_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icona_photocamera" />
+
+                    <ImageButton
+                        android:id="@+id/image_retro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/image_front"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icona_photocamera" />
+                </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/barcod_div"
+                            android:layout_below="@+id/image_div">
+                <ImageButton
+                    android:id="@+id/image_barcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/nr_barcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_barcode"
+                    android:layout_centerHorizontal="true"
+                    android:text="0000000000000" />
+                        </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/check_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/barcod_div"
+                    android:layout_marginTop="10dp">
+
+                    <Switch
+                        android:id="@+id/auto_focus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:checked="true"
+                        android:text="@string/auto_focus" />
+
+                    <Switch
+                        android:id="@+id/use_flash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:checked="false"
+                        android:text="@string/use_flash" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/status_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+</RelativeLayout>
+<!--
+</android.support.constraint.ConstraintLayout>-->

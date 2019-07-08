@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/btn_cards"
+        android:icon="@drawable/ic_cards_white"
+        android:title="carte"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/btn_depliant"
+        android:icon="@drawable/ic_depliant_white"
+        android:title="depliant"
+        app:showAsAction="always" />
+
+</menu>

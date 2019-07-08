@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:showIn="navigation_view">
+
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_elenco_cards"
+      android:icon="@drawable/ic_cards"
+      android:title="List Cards" />
+    <item
+      android:id="@+id/nav_elenco_depliants"
+      android:icon="@drawable/ic_depliant"
+      android:title="List Depliants" />
+    <item
+        android:id="@+id/nav_inserisci_card"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="new card" />
+  </group>
+
+  <item android:title="Communicate">
+    <menu>
+      <item
+        android:id="@+id/esci"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="Eci" />
+    </menu>
+  </item>
+
+</menu>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".InsertNewCard">
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Card_detail"
+    app:titleTextColor="@color/colorAccent" >
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:id="@+id/nome_card"
+      android:textSize="20dp"
+      android:textStyle="bold" />
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:id="@+id/image_front"
+    android:src="@drawable/icona_photocamera"
+    android:layout_above="@+id/image_barcode"
+      android:layout_marginBottom="10dp"/>
+
+
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/image_barcode"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true" />
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/nr_barcode"
+    android:layout_below="@id/image_barcode"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:text="123456789128"/>
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="150dp"
+      android:id="@+id/image_retro"
+      android:src="@drawable/icona_photocamera"
+      android:layout_below="@+id/nr_barcode"/>
+
+
+</RelativeLayout>
+  <!--
+  </android.support.constraint.ConstraintLayout>-->
